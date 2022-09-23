@@ -14,6 +14,9 @@
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+           <sonar.host.url>http://44.201.157.126:9000/</sonar.host.url>
+		<sonar.login>admin</sonar.login>
+		<sonar.password>admin</sonar.password>
   </properties>
 
   <modules>
@@ -22,13 +25,26 @@
   </modules>
 
   <distributionManagement>
+           
+       <repository>
+	      <id>nexus</id>
+	      <name>Landmark Technology Releases Nexus Repository</name>
+	      <url>http://107.20.76.134:8081/repository/Paypal-Releases/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>Landmark Technology Snapshot Nexus Repository </name>
+	      <url>http://107.20.76.134:8081/repository/Paypal-SNAPSHOT/</url>
+	    </snapshotRepository>
     <site>
       <id>site-server</id>
       <name>Test Project Site</name>
       <url>file:///tmp/maven-project-site</url>
     </site>
   </distributionManagement>
-
+               
+         
   <build>
     <plugins>
       <plugin>
